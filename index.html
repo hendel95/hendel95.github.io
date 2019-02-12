@@ -1,903 +1,142 @@
 <!DOCTYPE html>
-
-<audio id="Bgm" src="./music/bgm.mp3" autoplay loop> </audio>
-<audio id="Fx" src="./music/fx.wav" hidden="true"> </audio>
-<audio id="Clap" src="./music/clap.mp3" hidden="true"> </audio>
+<html>
 
 <head>
-	<style>
-	b{
-		font-size:40px;
-	}
+  <!-- Site made with Mobirise Website Builder v4.7.6, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.7.6, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/sol-icon-122x70.jpg" type="image/x-icon">
+  <meta name="description" content="Web Builder Description">
+  <title>Page 1</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
-	.modal2{
-		display: none; /* Hidden by default */
-		position: fixed; /* Stay in place */
-		z-index: 1; /* Sit on top */
-		padding-top: 0px; /* Location of the box */
-		left: 0;
-		top: 0;
-		width: 100%;/* Full width */
-		height: 100%; /* Full height */
-		overflow: auto; /* Enable scroll if needed */
-		background-color: rgb(0,0,0); /* Fallback color */
-		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-		text-align: center;
-		padding: 0!important;
-	}
-	.modal3{
- 		display: none; /* Hidden by default */
- 		position: fixed; /* Stay in place */
- 		z-index: 1; /* Sit on top */
- 		padding-top: 0px; /* Location of the box */
- 		left: 0;
- 		top: 0;
- 		width: 100%;/* Full width */
- 		height: 100%; /* Full height */
- 		overflow: auto; /* Enable scroll if needed */
- 		background-color: rgb(0,0,0); /* Fallback color */
- 		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
- 		text-align: center;
- 		padding: 0!important;
- 	}
-
-	.modal2-dialog.modal-center {
-		display: inline-block;
-		text-align: left;
-		vertical-align: middle;
-	}
-
-	/* Modal Content */
-	.modal2-content {
-		background-color: #fefefe;
-		background:url("img/SettingBox.png") no-repeat;
-		background-size: 100% 100%;
-		border: 1px solid #888;
-		width: 848px;
-		height: 734px;
-	}
-
-	.close2 {
-		color: #aaaaaa;
-		float: right;
-		font-size: 28px;
-		font-weight: bold;
-	}
-
-	.close2:hover,
-	.close2:focus {
-		color: #000;
-		text-decoration: none;
-		cursor: pointer;
-	}
-</style>
-<title>SCRABBLE GAME - by DoOptimal</title>
-
-<link rel="stylesheet" type="text/css" href="./css/index.css">
-
-<script type="text/javascript" src="./scripts/main.js"></script>
-<!-- <script type="text/javascript" src="./scripts/ReadySetting.js"></script> -->
-
-<script>
- 	function playBgm() {
- 	var bgm = document.getElementById('Bgm');
-	bgm.play();
-}
-
-
-function pauseBgm() {
-	var bgm = document.getElementById('Bgm');
-	bgm.pause();
-}
-
-function playFx () {
-	var fx = document.getElementById('Fx');
-	fx.play();
-}
-
-function playClap () {
-	// var bgm = document.getElementById('Bgm');
-	// bgm.pause();
-	var clap = document.getElementById('Clap');
-	clap.play();
-}
-
-function pauseClap() {
-	var bgm = document.getElementById('Bgm');
-	bgm.play();
-	var clap = document.getElementById('Clap');
-	clap.pause();
-
-}
-
-</script>
 
 
 </head>
 
-
 <body>
+  <section class="menu cid-rhMsX5wDLl" once="menu" id="menu2-e">
 
-	<div class="modal2" id="myModal2">
-
-		<!-- 		<div class="modal-dialog modal-sm"> -->
-			<div class="modal2-dialog modal-center" role="document">
-				<div class="modal2-content">
-					<span class="close2">&times;</span>
-
-					<script language="javascript">
-						var img = new Array("img/on.png","img/off.png");
-						var bgm = document.getElementById('Bgm');
-
-						var i;
-						i=0;
-						function chgImg1(){
-							if(i==0){
-								i=1;
-								pauseBgm();
-							}
-							else{
-								i=0;
-								playBgm();
-							}
-							document.button_bgm.src = img[i];
-						}
-
-					</script>
-
-					<script language="javascript">
-						var img = new Array("img/on.png","img/off.png");
-
-						var i;
-						i=0;
-						function chgImg2(){
-							if(i==0){
-								i=1;
-								var fx = document.getElementById('Fx');
-								fx.src = "";
-							}
-							else{
-								i=0;
-								var fx = document.getElementById('Fx');
-								fx.src = "./music/fx.wav";
-							}
-							document.button_fx.src = img[i];
-						}
-
-					</script>
-
-
-					<div class="modal2-body">
-						<!-- <table id="modal2-body"> -->
- 						<div class="modal_left">
- 							<center><img src="./img/bgm.png"></center>
-							<center><img name="button_bgm" src='img/on.png' align="center" onclick="chgImg1();"></center>
- 						</div>
-
-						<div class="modal_right">
- 							<center><img src="./img/fx.png"></center>
- 							<center><img name="button_fx" src="img/on.png" align="center" onClick="chgImg2();"></center>
- 						</div>
-
- 						<div class="modal_center">
- 							<center><img src="./img/HowTo.png"></center>
- 							<center><input id="btnTutorialShow" type="image" align="center" src="img/Tutorial.png"  width="350" ></center>
- 						</div>
-
- 						<div class="modal_center">
- 							<center><input id="btnVersionShow" type="image" align="center" src="img/Version.png"  width="350" ></center>
- 						</div>
-
- 					</div>
-
-
- 				</div>
- 			</div>
-
- </div>
-
- <div class="modal3" id="tutorialModal">
-
-
-
- 			<div class="modal2-dialog modal-center" role="document">
- 				<div class="modal2-content">
- 					<span class="closeTutorial">&times;</span>
-
- 					<div class="modal2-body">
- 						<div id="Tutorialmodal-body0">
- 						<center><img src="./img/t1.png"></center>
- 						<br/>
- 						<center>
-						<input id="next" type="image" align="center" src="./img/next.png" onclick="chagePage2();"></center>
-
- 						</div>
- 						<div id="Tutorialmodal-body1">
-						<center><img src="./img/t2.png"></center>
- 						<br/>
- 						<center>
- 						<input id="back" type="image" align="center" src="./img/back.png" onclick="chagePage1();">
- 						<input id="next" type="image" align="center" src="./img/next.png" onclick="chagePage3();"></center>
- 						</div>
- 						<div id="Tutorialmodal-body2">
-						<center><img src="./img/t3.png"></center>
- 						<br/>
- 						<center>
- 						<input id="back" type="image" align="center" src="./img/back.png" onclick="chagePage2();">
- 						<input id="next" type="image" align="center" src="./img/next.png" onclick="chagePage4();"></center>
- 						</div>
- 						<div id="Tutorialmodal-body3">
-						<center><img src="./img/t4.png"></center>
- 						<br/>
- 						<center>
- 						<input id="back" type="image" align="center" src="./img/back.png" onclick="chagePage3();">
- 						<input id="next" type="image" align="center" src="./img/next.png" onclick="chagePage5();"></center>
- 						</div>
- 						<div id="Tutorialmodal-body4">
-						<center><img src="./img/t5.png"></center>
- 						<br/>
- 						<center>
- 						<input id="back" type="image" align="center" src="./img/back.png" onclick="chagePage4();">
- 						<input id="next" type="image" align="center" src="./img/next.png" onclick="chagePage6();"></center>
- 						</div>
- 						<div id="Tutorialmodal-body5">
-						<center><img src="./img/t6.png"></center>
- 						<br/>
- 						<center>
- 						<input id="back" type="image" align="center" src="./img/back.png" onclick="chagePage5();"></center>
- 						</div>
-
-
-
-					</div>
-
-
-				</div>
-			</div>
-
-		</div>
-
-<div class="modal3" id="VersionModal">
-
- 			<div class="modal2-dialog modal-center" role="document">
- 				<div class="modal2-content">
- 					<span class="closeVersion">&times;</span>
-
- 					<div class="modal2-body">
- 						<table id="modal2-body">
-						<center><img src="./img/versionInfo.png"></center>
-
- 						</table>
- 					</div>
-
-
- 				</div>
- 			</div>
-
-
-
-</div>
-
-<div class="left_screen">
-
-	<div class="scrabble_main">
-		<div id="setting"><img src="./img/setting.png"></a></div>
-		<div id="scrabble_title"><img src="./img/Logo.png"></div>
-		<div id="team_name"><img src="./img/TeamLogo.png"></div>
-
-	</div>
-	<div>
-		<div id="userBox1" class="userBox1">
-			<img src="./img/UserBox.png">
-			<div class="user_icon">
-				<img src="./img/user1.png">
-			</div>
-			<div>
-				<p class="user_id"><script type="text/javascript"> document.write(player1N); </script></p>
-			</div>
-			<div class="score_box">
-				<!-- <p class="score_text"><div id="stats"style="background:url(./img/ScoreBox.png) no-repeat"></div></p> -->
-				<p class="score_text"><div id="stats"></div></p>
-			</div>
-			<div class="timer">
-				<p id="timer0">Timer</p>
-			</div>
-			<div id="turnbox0">
- 				<div class="turn_box"><img src="./img/myturn.png"></div>
- 			</div>
-		</div>
-
-		<div id="userBox2">
-			<img src="./img/UserBox.png">
-			<div class="user_icon">
-				<img src="./img/user2.png">
-			</div>
-			<div>
-				<p class="user_id"><script type="text/javascript"> document.write(player2N); </script></p>
-			</div>
-			<div class="score_box">
-				<!-- <img src="./img/ScoreBox.png"> -->
-				<p class="score_text"><div id="stats2"></div></p>
-			</div>
-			<div class="timer">
-				<p id="timer1">Timer</p>
-			</div>
-			<div id="turnbox1">
- 			</div>
-		</div>
-
-		<div id="userBox3">
-			<img src="./img/UserBox.png">
-			<div class="user_icon">
-				<img src="./img/user3.png">
-			</div>
-			<div>
-				<p class="user_id"><script type="text/javascript"> document.write(player3N); </script></p>
-			</div>
-			<div class="score_box">
-				<!-- <img src="./img/ScoreBox.png"> -->
-				<p class="score_text"><div id="stats3"></div></p>
-			</div>
-			<div class="timer">
-				<p id="timer2">Timer</p>
-			</div>
-			<div id="turnbox2">
- 			</div>
-		</div>
-
-		<div id="userBox4">
-			<img src="./img/UserBox.png">
-			<div class="user_icon">
-				<img src="./img/user4.png">
-			</div>
-			<div>
-				<p class="user_id"><script type="text/javascript"> document.write(player4N); </script></p>
-			</div>
-			<div class="score_box">
-				<!-- <img src="./img/ScoreBox.png"> -->
-				<p class="score_text"><div id="stats4"></div></p>
-			</div>
-			<div class="timer">
-				<p id="timer3">Timer</p>
-			</div>
-			<div id="turnbox3">
- 			</div>
-		</div>
-
-	</div>
-	<!-- <div> -->
-
-<script language="javascript">
-
-function PlayerShow(){
-		document.getElementById("userBox1").style.display="block";
-		document.getElementById("userBox2").style.display="block";
-		document.getElementById("userBox3").style.display="block";
-		document.getElementById("userBox4").style.display="block";
-
-	if(playerNum()==2){
-		document.getElementById("userBox3").style.visibility="hidden";
-		document.getElementById("userBox4").style.visibility="hidden";
-	}
-	else if(playerNum()==3){
-		document.getElementById("userBox4").style.visibility="hidden";
-	}
-}
-
-function TutorialShow(){
-		document.getElementById("Tutorialmodal-body1").style.display="none";
- 		document.getElementById("Tutorialmodal-body2").style.display="none";
-		document.getElementById("Tutorialmodal-body3").style.display="none";
-		document.getElementById("Tutorialmodal-body4").style.display="none";
-		document.getElementById("Tutorialmodal-body5").style.display="none";			
- 		document.getElementById("Tutorialmodal-body0").style.display="block";
- }
-
-PlayerShow();
-TutorialShow();
-</script>
-	<div class="bottom_left">
-	<!-- showUP버튼 동작 -->
-		<div id="show_up">
-		<input id="show_Up" type="image" src="./img/ShowUp.png" onclick="playFx();showUp();" width="80">
-		</div>
-
-
-		<div id="next_turn">
-		<input id="next_Turn" type="image" src="./img/NextTurn.png" onclick="playFx(); finalise();" width="80">
-		</div>
-
-
-		<div>
-		<div id="tiles_left" class="tiles_left">
-			<img src="./img/tileLeft_empty.png">
-			<p id="tile_left_text" class="text">TILES LEFT : </p>
-		</div>
-
-		<div id="hint_empty" class="hint_empty">
-			<img src="./img/Hint_empty.png">
-			<p class="text" id="hint_text">HINT:<script type="text/javascript">document.write(hint_left[turn]); </script></p>
-		</div>
-		<!--input id="hint_empty" class = "hint_empty" type="image" src="./img/Hint_empty.png" value= "HINT : 3"-->
-
-		<!-- hint 동작 -->
-		<div id="hintModal" class="modal">
-
-			<!-- Modal content -->
-			<div class="modal-content" >
-				<span class="closeHint">&times;</span>
-				<h2>HINT</h2>
-				<h4 id="hint_content" style="word-break:normal; padding-left: 10%; padding-right: 10%"></h4>
-				<span>
-				</span>
-			</div>
-
-		</div>
-
-
-
-
-
-		<input id="dictionary" type="image" src="./img/Dictionary.png">
-
-
-		<!-- dictionary버튼 동작 -->
-		<div id="myModal" class="modal">
-
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h2>Dictionary</h2>
-				<input id="search-word" type="text" placeholder="Search your word..">
-				<button id="search">?</button>
-				<p id="check_valid"></p>
-				<span>
-				</span>
-			</div>
-
-		</div>
-
-
-		<!-- 2LW버튼 동작 -->
-		<input id="LW" type="image" src="./img/2LW.png">
-
-		<!-- The Modal of 2LW-->
-		<div id="ModalOf2LW" class="modal">
-			<div class="modal-content">
-				<span class="closeLW">&times;</span>
-				<h2>2-LETTER WORDS</h2>
-				Here is a full list of 2-letter words in the Official SCRABBLE Players Dictionary. You can play any of these words.<br/>
-				<img src="./img/2LW_modal.png" width="500">
-
-			</div>
-
-		</div>
-
-	</div>
-
-	<div id="tilerack">
-		<table id="tileStorage" border="0" cellspacing="0" cellpadding="0" >
-			<tr>
-
-	<td id="tileStorage0" class="tileStore" style="background:url(./img/tile2.png) no-repeat" width="50" height="60" margin=0>
-	</td>
-	<td id="tileStorage1" class="tileStore" style="background:url(./img/Tile2.png) no-repeat" width="50" height="60">
-	</td>
-	<td id="tileStorage2" class="tileStore" style="background:url(./img/Tile2.png) no-repeat" width="50" height="60">
-	</td>
-	<td id="tileStorage3" class="tileStore" style="background:url(./img/Tile2.png) no-repeat" width="50" height="60">
-	</td>
-	<td id="tileStorage4" class="tileStore" style="background:url(./img/Tile2.png) no-repeat" width="50" height="60">
-	</td>
-	<td id="tileStorage5" class="tileStore" style="background:url(./img/Tile2.png) no-repeat" width="50" height="60">
-	</td>
-	<td id="tileStorage6" class="tileStore" style="background:url(./img/Tile2.png) no-repeat" width="50" height="60">
-	</td>
-
-				</tr>
-		</table>
-
-	</div>
-
-	<div>
-		<input id="exchange" type="image" src="./img/exchange.png" onclick="playFx(); exchange();" height="42">
- 		<input id="pass" type="image" src="./img/Pass.png" onclick="playFx(); pass();"  height="42">
- 		<input id="shuffle" type="image" src="./img/Shuffle.png" onclick="playFx(); shuffle();" height="42">
- 		<!-- <div id="exchange"><img src="./img/exchange.png" onclick="exchange();"></div> -->
- 		<!-- <div id="pass"><img src="./img/Pass.png" onClick="pass();"></div> -->
- 		<!-- <div id="shuffle"><img src="./img/Shuffle.png" onclick="shuffle();"></div> -->
-	</div>
-</div>
-</div>
-
-<div class="center_screen">
-	<table id="board" border="0" cellspacing="0" cellpadding="1">
-		<tr>
-			<td id="c1r1" class="tripleWord"><a class="empty" href="#" onclick="placeTile('c1r1'); return false;"><img src="./img/3W.png" class="image"></a></td>
-			<td id="c2r1"><a class="empty" href="#" onclick="placeTile('c2r1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3r1"><a class="empty" href="#" onclick="placeTile('c3r1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4r1" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c4r1'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c5r1"><a class="empty" href="#" onclick="placeTile('c5r1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6r1"><a class="empty" href="#" onclick="placeTile('c6r1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7r1"><a class="empty" href="#" onclick="placeTile('c7r1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8r1" class="tripleWord"><a class="empty" href="#" onclick="placeTile('c8r1'); return false;"><img src="./img/3W.png" class="image"></a></td>
-			<td id="c9r1"><a class="empty" href="#" onclick="placeTile('c9r1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cAr1"><a class="empty" href="#" onclick="placeTile('cAr1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBr1"><a class="empty" href="#" onclick="placeTile('cBr1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCr1" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('cCr1'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cDr1"><a class="empty" href="#" onclick="placeTile('cDr1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cEr1"><a class="empty" href="#" onclick="placeTile('cEr1'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFr1" class="tripleWord"><a class="empty" href="#" onclick="placeTile('cFr1'); return false;"><img src="./img/3W.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1r2"><a class="empty" href="#" onclick="placeTile('c1r2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2r2" class="doubleWord"><a class="empty" href="#" onclick="placeTile('c2r2'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="c3r2"><a class="empty" href="#" onclick="placeTile('c3r2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4r2"><a class="empty" href="#" onclick="placeTile('c4r2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5r2"><a class="empty" href="#" onclick="placeTile('c5r2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6r2" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('c6r2'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="c7r2"><a class="empty" href="#" onclick="placeTile('c7r2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8r2"><a class="empty" href="#" onclick="placeTile('c8r2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9r2"><a class="empty" href="#" onclick="placeTile('c9r2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cAr2" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('cAr2'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="cBr2"><a class="empty" href="#" onclick="placeTile('cBr2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCr2"><a class="empty" href="#" onclick="placeTile('cCr2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDr2"><a class="empty" href="#" onclick="placeTile('cDr2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cEr2" class="doubleWord"><a class="empty" href="#" onclick="placeTile('cEr2'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="cFr2"><a class="empty" href="#" onclick="placeTile('cFr2'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1r3"><a class="empty" href="#" onclick="placeTile('c1r3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2r3"><a class="empty" href="#" onclick="placeTile('c2r3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3r3" class="doubleWord"><a class="empty" href="#" onclick="placeTile('c3r3'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="c4r3"><a class="empty" href="#" onclick="placeTile('c4r3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5r3"><a class="empty" href="#" onclick="placeTile('c5r3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6r3"><a class="empty" href="#" onclick="placeTile('c6r3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7r3" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c7r3'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c8r3"><a class="empty" href="#" onclick="placeTile('c8r3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9r3" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c9r3'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cAr3"><a class="empty" href="#" onclick="placeTile('cAr3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBr3"><a class="empty" href="#" onclick="placeTile('cBr3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCr3"><a class="empty" href="#" onclick="placeTile('cCr3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDr3" class="doubleWord"><a class="empty" href="#" onclick="placeTile('cDr3'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="cEr3"><a class="empty" href="#" onclick="placeTile('cEr3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFr3"><a class="empty" href="#" onclick="placeTile('cFr3'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1r4" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c1r4'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c2r4"><a class="empty" href="#" onclick="placeTile('c2r4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3r4"><a class="empty" href="#" onclick="placeTile('c3r4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4r4" class="doubleWord"><a class="empty" href="#" onclick="placeTile('c4r4'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="c5r4"><a class="empty" href="#" onclick="placeTile('c5r4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6r4"><a class="empty" href="#" onclick="placeTile('c6r4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7r4"><a class="empty" href="#" onclick="placeTile('c7r4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8r4" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c8r4'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c9r4"><a class="empty" href="#" onclick="placeTile('c9r4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cAr4"><a class="empty" href="#" onclick="placeTile('cAr4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBr4"><a class="empty" href="#" onclick="placeTile('cBr4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCr4" class="doubleWord"><a class="empty" href="#" onclick="placeTile('cCr4'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="cDr4"><a class="empty" href="#" onclick="placeTile('cDr4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cEr4"><a class="empty" href="#" onclick="placeTile('cEr4'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFr4" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('cFr4'); return false;"><img src="./img/2L.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1r5"><a class="empty" href="#" onclick="placeTile('c1r5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2r5"><a class="empty" href="#" onclick="placeTile('c2r5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3r5"><a class="empty" href="#" onclick="placeTile('c3r5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4r5"><a class="empty" href="#" onclick="placeTile('c4r5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5r5" class="doubleWord"><a class="empty" href="#" onclick="placeTile('c5r5'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="c6r5"><a class="empty" href="#" onclick="placeTile('c6r5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7r5"><a class="empty" href="#" onclick="placeTile('c7r5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8r5"><a class="empty" href="#" onclick="placeTile('c8r5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9r5"><a class="empty" href="#" onclick="placeTile('c9r5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cAr5"><a class="empty" href="#" onclick="placeTile('cAr5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBr5" class="doubleWord"><a class="empty" href="#" onclick="placeTile('cBr5'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="cCr5"><a class="empty" href="#" onclick="placeTile('cCr5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDr5"><a class="empty" href="#" onclick="placeTile('cDr5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cEr5"><a class="empty" href="#" onclick="placeTile('cEr5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFr5"><a class="empty" href="#" onclick="placeTile('cFr5'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1r6"><a class="empty" href="#" onclick="placeTile('c1r6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2r6" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('c2r6'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="c3r6"><a class="empty" href="#" onclick="placeTile('c3r6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4r6"><a class="empty" href="#" onclick="placeTile('c4r6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5r6"><a class="empty" href="#" onclick="placeTile('c5r6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6r6" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('c6r6'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="c7r6"><a class="empty" href="#" onclick="placeTile('c7r6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8r6"><a class="empty" href="#" onclick="placeTile('c8r6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9r6"><a class="empty" href="#" onclick="placeTile('c9r6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cAr6" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('cAr6'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="cBr6"><a class="empty" href="#" onclick="placeTile('cBr6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCr6"><a class="empty" href="#" onclick="placeTile('cCr6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDr6"><a class="empty" href="#" onclick="placeTile('cDr6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cEr6" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('cEr6'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="cFr6"><a class="empty" href="#" onclick="placeTile('cFr6'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1r7"><a class="empty" href="#" onclick="placeTile('c1r7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2r7"><a class="empty" href="#" onclick="placeTile('c2r7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3r7" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c3r7'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c4r7"><a class="empty" href="#" onclick="placeTile('c4r7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5r7"><a class="empty" href="#" onclick="placeTile('c5r7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6r7"><a class="empty" href="#" onclick="placeTile('c6r7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7r7" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c7r7'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c8r7"><a class="empty" href="#" onclick="placeTile('c8r7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9r7" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c9r7'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cAr7"><a class="empty" href="#" onclick="placeTile('cAr7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBr7"><a class="empty" href="#" onclick="placeTile('cBr7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCr7"><a class="empty" href="#" onclick="placeTile('cCr7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDr7" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('cDr7'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cEr7"><a class="empty" href="#" onclick="placeTile('cEr7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFr7"><a class="empty" href="#" onclick="placeTile('cFr7'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1r8" class="tripleWord"><a class="empty" href="#" onclick="placeTile('c1r8'); return false;"><img src="./img/3W.png" class="image"></a></td>
-			<td id="c2r8"><a class="empty" href="#" onclick="placeTile('c2r8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3r8"><a class="empty" href="#" onclick="placeTile('c3r8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4r8" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c4r8'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c5r8"><a class="empty" href="#" onclick="placeTile('c5r8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6r8"><a class="empty" href="#" onclick="placeTile('c6r8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7r8"><a class="empty" href="#" onclick="placeTile('c7r8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8r8" class="star"><a class="empty" href="#" onclick="placeTile('c8r8'); return false;"><img src="./img/star.png" class="image"></a></td>
-			<td id="c9r8"><a class="empty" href="#" onclick="placeTile('c9r8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cAr8"><a class="empty" href="#" onclick="placeTile('cAr8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBr8"><a class="empty" href="#" onclick="placeTile('cBr8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCr8" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('cCr8'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cDr8"><a class="empty" href="#" onclick="placeTile('cDr8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cEr8"><a class="empty" href="#" onclick="placeTile('cEr8'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFr8" class="tripleWord"><a class="empty" href="#" onclick="placeTile('cFr8'); return false;"><img src="./img/3W.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1r9"><a class="empty" href="#" onclick="placeTile('c1r9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2r9"><a class="empty" href="#" onclick="placeTile('c2r9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3r9" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c3r9'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c4r9"><a class="empty" href="#" onclick="placeTile('c4r9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5r9"><a class="empty" href="#" onclick="placeTile('c5r9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6r9"><a class="empty" href="#" onclick="placeTile('c6r9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7r9" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c7r9'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c8r9"><a class="empty" href="#" onclick="placeTile('c8r9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9r9" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c9r9'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cAr9"><a class="empty" href="#" onclick="placeTile('cAr9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBr9"><a class="empty" href="#" onclick="placeTile('cBr9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCr9"><a class="empty" href="#" onclick="placeTile('cCr9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDr9" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('cDr9'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cEr9"><a class="empty" href="#" onclick="placeTile('cEr9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFr9"><a class="empty" href="#" onclick="placeTile('cFr9'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1rA"><a class="empty" href="#" onclick="placeTile('c1rA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2rA" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('c2rA'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="c3rA"><a class="empty" href="#" onclick="placeTile('c3rA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4rA"><a class="empty" href="#" onclick="placeTile('c4rA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5rA"><a class="empty" href="#" onclick="placeTile('c5rA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6rA" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('c6rA'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="c7rA"><a class="empty" href="#" onclick="placeTile('c7rA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8rA"><a class="empty" href="#" onclick="placeTile('c8rA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9rA"><a class="empty" href="#" onclick="placeTile('c9rA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cArA" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('cArA'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="cBrA"><a class="empty" href="#" onclick="placeTile('cBrA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCrA"><a class="empty" href="#" onclick="placeTile('cCrA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDrA"><a class="empty" href="#" onclick="placeTile('cDrA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cErA" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('cErA'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="cFrA"><a class="empty" href="#" onclick="placeTile('cFrA'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1rB"><a class="empty" href="#" onclick="placeTile('c1rB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2rB"><a class="empty" href="#" onclick="placeTile('c2rB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3rB"><a class="empty" href="#" onclick="placeTile('c3rB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4rB"><a class="empty" href="#" onclick="placeTile('c4rB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5rB" class="doubleWord"><a class="empty" href="#" onclick="placeTile('c5rB'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="c6rB"><a class="empty" href="#" onclick="placeTile('c6rB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7rB"><a class="empty" href="#" onclick="placeTile('c7rB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8rB"><a class="empty" href="#" onclick="placeTile('c8rB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9rB"><a class="empty" href="#" onclick="placeTile('c9rB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cArB"><a class="empty" href="#" onclick="placeTile('cArB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBrB" class="doubleWord"><a class="empty" href="#" onclick="placeTile('cBrB'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="cCrB"><a class="empty" href="#" onclick="placeTile('cCrB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDrB"><a class="empty" href="#" onclick="placeTile('cDrB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cErB"><a class="empty" href="#" onclick="placeTile('cErB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFrB"><a class="empty" href="#" onclick="placeTile('cFrB'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1rC" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c1rC'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c2rC"><a class="empty" href="#" onclick="placeTile('c2rC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3rC"><a class="empty" href="#" onclick="placeTile('c3rC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4rC" class="doubleWord"><a class="empty" href="#" onclick="placeTile('c4rC'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="c5rC"><a class="empty" href="#" onclick="placeTile('c5rC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6rC"><a class="empty" href="#" onclick="placeTile('c6rC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7rC"><a class="empty" href="#" onclick="placeTile('c7rC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8rC" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c8rC'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c9rC"><a class="empty" href="#" onclick="placeTile('c9rC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cArC"><a class="empty" href="#" onclick="placeTile('cArC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBrC"><a class="empty" href="#" onclick="placeTile('cBrC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCrC" class="doubleWord"><a class="empty" href="#" onclick="placeTile('cCrC'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="cDrC"><a class="empty" href="#" onclick="placeTile('cDrC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cErC"><a class="empty" href="#" onclick="placeTile('cErC'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFrC" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('cFrC'); return false;"><img src="./img/2L.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1rD"><a class="empty" href="#" onclick="placeTile('c1rD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2rD"><a class="empty" href="#" onclick="placeTile('c2rD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3rD" class="doubleWord"><a class="empty" href="#" onclick="placeTile('c3rD'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="c4rD"><a class="empty" href="#" onclick="placeTile('c4rD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5rD"><a class="empty" href="#" onclick="placeTile('c5rD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6rD"><a class="empty" href="#" onclick="placeTile('c6rD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7rD" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c7rD'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c8rD"><a class="empty" href="#" onclick="placeTile('c8rD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9rD" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c9rD'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cArD"><a class="empty" href="#" onclick="placeTile('cArD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBrD"><a class="empty" href="#" onclick="placeTile('cBrD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCrD"><a class="empty" href="#" onclick="placeTile('cCrD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDrD" class="doubleWord"><a class="empty" href="#" onclick="placeTile('cDrD'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="cErD"><a class="empty" href="#" onclick="placeTile('cErD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFrD"><a class="empty" href="#" onclick="placeTile('cFrD'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1rE"><a class="empty" href="#" onclick="placeTile('c1rE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c2rE" class="doubleWord"><a class="empty" href="#" onclick="placeTile('c2rE'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="c3rE"><a class="empty" href="#" onclick="placeTile('c3rE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4rE"><a class="empty" href="#" onclick="placeTile('c4rE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c5rE"><a class="empty" href="#" onclick="placeTile('c5rE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6rE" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('c6rE'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="c7rE"><a class="empty" href="#" onclick="placeTile('c7rE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8rE"><a class="empty" href="#" onclick="placeTile('c8rE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c9rE"><a class="empty" href="#" onclick="placeTile('c9rE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cArE" class="tripleLetter"><a class="empty" href="#" onclick="placeTile('cArE'); return false;"><img src="./img/3L.png" class="image"></a></td>
-			<td id="cBrE"><a class="empty" href="#" onclick="placeTile('cBrE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCrE"><a class="empty" href="#" onclick="placeTile('cCrE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cDrE"><a class="empty" href="#" onclick="placeTile('cDrE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cErE" class="doubleWord"><a class="empty" href="#" onclick="placeTile('cErE'); return false;"><img src="./img/2W.png" class="image"></a></td>
-			<td id="cFrE"><a class="empty" href="#" onclick="placeTile('cFrE'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-		</tr>
-		<tr>
-			<td id="c1rF" class="tripleWord"><a class="empty" href="#" onclick="placeTile('c1rF'); return false;"><img src="./img/3W.png" class="image"></a></td>
-			<td id="c2rF"><a class="empty" href="#" onclick="placeTile('c2rF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c3rF"><a class="empty" href="#" onclick="placeTile('c3rF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c4rF" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('c4rF'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="c5rF"><a class="empty" href="#" onclick="placeTile('c5rF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c6rF"><a class="empty" href="#" onclick="placeTile('c6rF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c7rF"><a class="empty" href="#" onclick="placeTile('c7rF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="c8rF" class="tripleWord"><a class="empty" href="#" onclick="placeTile('c8rF'); return false;"><img src="./img/3W.png" class="image"></a></td>
-			<td id="c9rF"><a class="empty" href="#" onclick="placeTile('c9rF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cArF"><a class="empty" href="#" onclick="placeTile('cArF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cBrF"><a class="empty" href="#" onclick="placeTile('cBrF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cCrF" class="doubleLetter"><a class="empty" href="#" onclick="placeTile('cCrF'); return false;"><img src="./img/2L.png" class="image"></a></td>
-			<td id="cDrF"><a class="empty" href="#" onclick="placeTile('cDrF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cErF"><a class="empty" href="#" onclick="placeTile('cErF'); return false;"><img src="./img/BoardTile.png" class="image"></a></td>
-			<td id="cFrF" class="tripleWord"><a class="empty" href="#" onclick="placeTile('cFrF'); return false;"><img src="./img/3W.png" class="image"></a></td>
-		</tr>
-	</table>
-
-</div>
-
-<script src="./scripts/en_wordlist.js"></script>
-<script src="./scripts/new_wordmap.js"></script>
-
-<script>
-
-</script>
-
-<script>
-	document.getElementById("search").addEventListener("click", function(){
-			var word = document.getElementById("search-word").value;
-			if (g_wordmap[word] == 1){
-				document.getElementById("check_valid").innerHTML= "<p>Is a valid word</p>";
-			}
-			else{
-				document.getElementById("check_valid").innerHTML = "<p>Is not a valid word</p>";
-			}
-		});
-</script>
-
-<script type="text/javascript">
-
-drawTileStorage();
-
-// Get the modal
-var modal = document.getElementById('myModal');
-var modalLW = document.getElementById('ModalOf2LW');
-var modal2 = document.getElementById('myModal2');
-var modalTutorial = document.getElementById('tutorialModal');
-var modalVersion = document.getElementById('VersionModal');
-var modalHint = document.getElementById('hintModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("dictionary");
-var btnLW = document.getElementById("LW");
-var btn2 = document.getElementById("setting");
-var btnTutorialShow = document.getElementById("btnTutorialShow");
-var btnVersionShow = document.getElementById("btnVersionShow");
-var btnHint = document.getElementById("hint_empty");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-var spanLW = document.getElementsByClassName("closeLW")[0];
-var span2 = document.getElementsByClassName("close2")[0];
-var spanTutorial = document.getElementsByClassName("closeTutorial")[0];
-var spanVersion = document.getElementsByClassName("closeVersion")[0];
-var spanHint = document.getElementsByClassName("closeHint")[0];
-
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-	playFx();
-    modal.style.display = "block";
-}
-btnLW.onclick = function() {
-	playFx();
-	modalLW.style.display = "block";
-}
-btn2.onclick = function() {
-	playFx();
-    modal2.style.display = "block";
-}
-btnTutorialShow.onclick = function() {
-     modalTutorial.style.display = "block";
- 	modal2.style.display = "none";
-
- }
- btnVersionShow.onclick = function() {
-     modalVersion.style.display = "block";
- 	modal2.style.display = "none";
- }
- btnHint.onclick = function() {
- 	findHint();
- 	<!-- decreaseHint(); -->
- 	<!-- modalHint.style.display = "block"; -->
- }
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-spanLW.onclick = function() {
-	modalLW.style.display = "none";
-}
-span2.onclick = function() {
-    modal2.style.display = "none";
-}
-spanTutorial.onclick = function() {
-     modalTutorial.style.display = "none";
- 	modal2.style.display = "block";
- }
- spanVersion.onclick = function() {
-     modalVersion.style.display = "none";
- 	modal2.style.display = "block";
-
- }
- spanHint.onclick = function() {
- 	modalHint.style.display = "none";
- }
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event){
-	if (event.target == modal){
-	    modal.style.display = "none";
-	}
-	if (event.target == modalLW){
-		modalLW.style.display = "none";
-	}
-	if (event.target == modal2){
-	    modal2.style.display = "none";
-	}
-	if (event.target == modalTutorial){
-	     modalTutorial.style.display = "none";
-	 	modal2.style.display = "none";
-	}
-	if (event.target == modalVersion){
-	    modalVersion.style.display = "none";
-	 	modal2.style.display = "none";
-	}
-	if (event.target == modalHint){
-		modalHint.style.display = "none";
-	}
-}
-
-
-
-</script>
 
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+      <div class="menu-logo">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+                    <a href="https://mobirise.com">
+                        <img src="assets/images/solead.png" alt="Mobirise" title="" style="height: 3.8rem;">
+                    </a>
+                </span>
+
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+      </div>
+    </nav>
+  </section>
+
+
+  <section class="features15 cid-rhP0nPOS11" id="features15-h">
+
+
+
+
+    <div class="container cid-rhOR8ocUGb">
+      <h2 class="mbr-section-title mbr-bold pb-3 align-center mbr-fonts-style display-2">김 신한님, 안녕하세요</h2>
+      <p class="mbr-section-title pb-3 align-center mbr-fonts-style display-5">SIoT에서 편리한 서비스를 경험해보세요!   <span></span> </p>
+      <span></span>
+
+      <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style"></h3>
+
+
+      <div class="mbr-gallery-row">
+        <div class="mbr-gallery-layout-default  align-center row">
+
+
+
+          <div class="mbr-gallery-item col-md-3" data-video-url="false" data-tags="Awesome">
+            <div href="#lb-gallery3-j" data-slide-to="0" data-toggle="modal">
+              <a href="production/page2.html" ><img src="assets/images/s1.png" style="width:80%;" alt="" title=""></a>
+              <span class="icon-focus"></span></div>
+          </div>
+
+          <div class="mbr-gallery-item col-md-3" data-video-url="false" data-tags="Responsive">
+            <div href="#lb-gallery3-j" data-slide-to="1" data-toggle="modal">
+              <a href="page1.html" ><img src="assets/images/s2.png" style="width:80%;" alt="" title=""></a>
+              <span class="icon-focus"></span>
+            </div>
+          </div>
+
+          <div class="mbr-gallery-item col-md-3" data-video-url="false" data-tags="Creative">
+            <div href="#lb-gallery3-j" data-slide-to="2" data-toggle="modal">
+              <a href="page3.html" ><img src="assets/images/s3.png" style="width:80%;" alt="" title=""></a>
+              <span class="icon-focus"></span>
+            </div>
+          </div>
+
+          <div class="mbr-gallery-item col-md-3" data-video-url="false" data-tags="Animated">
+            <div href="#lb-gallery3-j" data-slide-to="3" data-toggle="modal">
+              <a href="production/page2.html" ><img src="assets/images/s4.png" style="width:80%;" alt="" title=""></a>
+              <span class="icon-focus"></span>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+
+        <!--
+        <div class="mbr-gallery-item mbr-gallery-item--p8" data-video-url="false" data-tags="Awesome">
+          <a href="production/index.html" ><img src="assets/images/s1.png" alt="" title=""><span class="icon-focus"></span></a>
+                </div>
+                <div class="mbr-gallery-item mbr-gallery-item--p8" data-video-url="false" data-tags="Responsive">
+                  <a href="page1.html" ><img src="assets/images/s2.png" alt="" title=""><span class="icon-focus"></span></a>
+                </div>
+                <div class="mbr-gallery-item mbr-gallery-item--p8" data-video-url="false" data-tags="Creative">
+                  <a href="production/index.html" ><img src="assets/images/s3.png" alt="" title=""><span class="icon-focus"></span></a>
+                </div>
+                <div class="mbr-gallery-item mbr-gallery-item--p8" data-video-url="false" data-tags="Animated">
+                  <a href="production/index.html" ><img src="assets/images/s4.png" alt="" title=""><span class="icon-focus"></span></a>
+                </div>-->
+
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/mbr-flip-card/mbr-flip-card.js"></script>
+  <script src="assets/theme/js/script.js"></script>
 
 
 </body>
